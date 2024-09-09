@@ -1,2 +1,2 @@
 # React 
-E1
+Demo learning app
