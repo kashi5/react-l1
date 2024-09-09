@@ -1,31 +1,47 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-/*
-<div id="parent">
-    <div id="child">
-        <h1>Hello World</h1>
+
+
+const elem = <span> React Element</span>
+//React Element 
+const element = React.createElement(
+    'h1', 
+    {id: 'heading'}, 
+    'Hello World'
+);
+
+//JSX (transpiled before ir reaches the js engine) - parcel  - Bable
+//JSX => React.createElement => React Element => HTMLElement(render)
+const heading = <h1 className="head" tabIndex="1"> Hello World 🚀</h1>;
+
+const Title = () => (
+    <h1 className="head" tabIndex="5"> 
+    | Namaste React using JSX |
+    {elem}
+    </h1>
+);
+
+
+const random_number = Math.random();
+//React Functional Component
+const HeadingComponent = () => (
+    <div id ="container">
+        <h1>{random_number}</h1>
+        <Title />
+        {Title()} 
+        <h1 className="head" tabIndex="1"> Hello World 🚀</h1>
     </div>
-</div>
+    
+)
 
+//React Functional Component
+const HeadingComponent1 = () => <h1 className="head" tabIndex="1"> Hello World 🚀</h1>;
 
-*/
-const parent = React.createElement('div', { id: 'parent' }, 
-    React.createElement('div', {id:"child1"},
-        [React.createElement('h1', null, 'Hello World h1'),
-        React.createElement('h2', null, 'Hello World h2'),
-        React.createElement('h3', null, 'Hello World'),
-    ]), 
-    React.createElement('div', {id:"child1"},
-        [React.createElement('h1', null, 'Hello World child h1'),
-        React.createElement('h2', null, 'Hello World'),
-        React.createElement('h3', null, 'Hello World'),
-    ])
-        );
+//both HeadingComponent1 and HeadingComponent are same
 
-const heading = React.createElement('h1', { id: 'heading', xyz: "abc" }, 'Hello World');
-console.log(parent); //object
+//React Element
+const HeadingComponent3 = <h1 className="head" tabIndex="1"> Hello World 🚀</h1>;
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(parent);
-
-
-
+// root.render(heading);  //syntax for React element
+root.render(<HeadingComponent />); //syntax for React Functional Component
