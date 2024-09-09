@@ -1,0 +1,28 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "Demo learning app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kashi5/react-l1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kashi5/react-l1/issues"
+  },
+  "homepage": "https://github.com/kashi5/react-l1#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "punycode": "^2.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
