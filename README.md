@@ -17,3 +17,7 @@ Demo learning app
 - error handling
 - https
 - tree shaking - remove unused code 
+
+
+nvm use 20.10.0
+npm start
